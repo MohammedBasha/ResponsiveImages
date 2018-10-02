@@ -22,5 +22,7 @@ for (let i = 0; i < IMAGES.length; i++) {
         type = IMAGES[i].getAttribute("data-type"),
         srcSet = makeSrcset(imgSrc),
         sizes = SIZES[type];
-    console.log(imgSrc, "\n", type, "\n", srcSet, "\n", sizes);
+    
+    IMAGES[i].setAttribute("srcset", srcSet);
+    IMAGES[i].setAttribute("sizes", sizes);
 }
